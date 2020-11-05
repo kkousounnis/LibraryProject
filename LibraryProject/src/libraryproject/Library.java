@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package libraryproject;
 
-/**
- *
- * @author root
- */
 public class Library {
-    
+
+    Book[] books;
+
+    Library(Book[] books) {
+        this.books = books;
+    }
+
+    public void printAvailableBooks(Book[] Books) {
+        for (Book b : Books) {
+            if (b.isAvailable()) {
+                System.out.println(b.toString());
+            }
+        }
+    }
+
+    public String printBookDetails() {
+        return "G";
+    }
+
+    public void printBooksFromAuthor() {
+
+    }
+
+    public int printTheMostPopularBook() {
+        return 1;
+    }
+
 }

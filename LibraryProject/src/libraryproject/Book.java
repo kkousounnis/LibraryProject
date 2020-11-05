@@ -68,15 +68,15 @@ public class Book {
     }
 
     public String toString() {
-        return "{Author: "+author.toString()+",Title: " + this.title + ",PhysicalCopies: " + this.physicalCopies + ",isbn: " + this.isbn + ",avalableCopies: " + this.availableCopies +"}";
+        return "{Author: " + author.toString() + ",Title: " + this.title + ",PhysicalCopies: " + this.physicalCopies + ",isbn: " + this.isbn + ",avalableCopies: " + this.availableCopies + "}";
     }
 
     public boolean isAvailable() {
         return (availableCopies > 0) ? true : false;
     }
-    
-    public boolean hasAuthor(Author name){
-        return (author.equals(name))?true:false;
+
+    public boolean hasAuthor(Author name) {
+        return (author.equals(name)) ? true : false;
     }
 
 }

@@ -5,6 +5,8 @@
  */
 package libraryproject;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author root
@@ -17,11 +19,16 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Author Theodoridis = new Author("Theodoridis");
-        Book b1 = new Book("DataBase1",Theodoridis,100,"1234",0,2);
+        Book b1 = new Book("DataBase1", Theodoridis, 100, "1234", 1, 2);
+        Book b2 = new Book("DataBase2", Theodoridis, 50, "1235", 3, 2);
+        Book[] arr = {b1,b2};
         System.out.println(b1.isAvailable());
         System.out.println(b1.toString());
         System.out.println(b1.hasAuthor(Theodoridis));
         
+        Library l = new Library(arr);
+        l.printAvailableBooks(arr);
+
     }
-    
+
 }
