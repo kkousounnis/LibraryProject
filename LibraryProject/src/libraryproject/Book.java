@@ -68,7 +68,13 @@ public class Book {
     }
 
     public String toString() {
-        return "{Author: " + author.toString() + ",Title: " + this.title + ",PhysicalCopies: " + this.physicalCopies + ",isbn: " + this.isbn + ",avalableCopies: " + this.availableCopies + "}";
+        return "{Author: " + author.toString() 
+                + ",Title: " + this.title 
+                + ",PhysicalCopies: " + this.physicalCopies 
+                + ",isbn: " + this.isbn 
+                + ",availableCopies: " + this.availableCopies 
+                + ",timesRented: " + this.timesRented
+                + "}";
     }
 
     public boolean isAvailable() {
