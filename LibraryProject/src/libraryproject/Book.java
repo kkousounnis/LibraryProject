@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package libraryproject;
 
-/**
- *
- * @author root
- */
 public class Book {
 
     private String title;
@@ -68,11 +59,11 @@ public class Book {
     }
 
     public String toString() {
-        return "{Author: " + author.toString() 
-                + ",Title: " + this.title 
-                + ",PhysicalCopies: " + this.physicalCopies 
-                + ",isbn: " + this.isbn 
-                + ",availableCopies: " + this.availableCopies 
+        return "{Author: " + author.toString()
+                + ",Title: " + this.title
+                + ",PhysicalCopies: " + this.physicalCopies
+                + ",isbn: " + this.isbn
+                + ",availableCopies: " + this.availableCopies
                 + ",timesRented: " + this.timesRented
                 + "}";
     }

@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package libraryproject;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author root
- */
 public class Main {
 
     /**
@@ -37,10 +29,10 @@ public class Main {
         Book b8 = new Book("Book8", psarakis, "764674973-2", 10, 0, 15);
         Book b9 = new Book("Book9", sapounakis, "052469721-2", 10, 6, 17);
         Book b10 = new Book("Book10", psarakis, "609291817-2", 10, 3, 13);
-        Book b11 = new Book("Book11", theodoridis, "451378028-2", 10, 8, 12);
+        Book b11 = new Book("Book11", birbou, "451378028-2", 10, 8, 12);
         Book b12 = new Book("Book12", kotzanikolaou, "142352773-2", 10, 6, 20);
         Book b13 = new Book("Book13", theodoridis, "115135166-2", 10, 0, 20);
-        Book b14 = new Book("Book14", kotzanikolaou, "631942468-2", 10, 3, 20);
+        Book b14 = new Book("Book14", birbou, "631942468-2", 10, 3, 20);
         Book b15 = new Book("Book15", theodoridis, "323662444-2", 10, 0, 23);
         Book b16 = new Book("Book16", skondras, "121360492-2", 10, 0, 12);
         Book b17 = new Book("Book17", kotzanikolaou, "391199302-2", 10, 0, 20);
