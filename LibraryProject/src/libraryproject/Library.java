@@ -8,7 +8,7 @@ public class Library {
         this.books = books;
     }
 
-    public void printAvailableBooks(Book[] books) {
+    public void printAvailableBooks() {
         for (Book b : books) {
             if (b.isAvailable()) {
                 System.out.println(b.toString());
@@ -16,19 +16,19 @@ public class Library {
         }
     }
 
-    public String printBookDetails(Book[] books, String title) {
+    public String printBookDetails(String title) {
         for (Book b : books) {
             if (b.getTitle().equals(title)) {
-                System.out.println("right");
+
                 return b.toString();
             }
         }
-        System.out.println("wrong");
+
         return "Error no book found with this title.";
 
     }
 
-    public void printBooksFromAuthor(Book[] books, Author author) {
+    public void printBooksFromAuthor(Author author) {
         for (Book b : books) {
             if (b.getAuthor().equals(author)) {
                 System.out.println(b.toString());
@@ -36,7 +36,7 @@ public class Library {
         }
     }
 
-    public Book printTheMostPopularBook(Book[] books) {
+    public Book printTheMostPopularBook() {
         int max = 0;
         int maxpointer = 0;
         int pointer = 0;

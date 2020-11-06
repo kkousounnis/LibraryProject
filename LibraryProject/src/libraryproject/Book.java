@@ -58,7 +58,7 @@ public class Book {
         this.timesRented = timesRented;
     }
 
-    Book(String title, Author author, int physicalCopies, String isbn, int availableCopies, int timesRented) {
+    Book(String title, Author author, String isbn, int physicalCopies, int availableCopies, int timesRented) {
         this.title = title;
         this.author = author;
         this.physicalCopies = physicalCopies;

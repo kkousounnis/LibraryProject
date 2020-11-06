@@ -17,43 +17,54 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Author Theodoridis = new Author("Theodoridis");
-        Author Birbou = new Author("Birbou");
-        Book b1 = new Book("DataBase1", Theodoridis, 100, "1234", 1, 9);
-        Book b2 = new Book("DataBase2", Theodoridis, 50, "1235", 3, 10);
-        Book b3 = new Book("DataBase3", Birbou, 40, "1236", 4, 7);
-        Book[] arr = {b1, b2, b3};
-        
-        System.out.println(b1.isAvailable());
-        
-        System.out.println(b1.toString());
-        
-        System.out.println(b1.hasAuthor(Theodoridis));
-        
 
-        Library l = new Library(arr);
-        System.out.println("Prints books that have at least one available physical copy.");
-        l.printAvailableBooks(arr);
+        Author theodoridis = new Author("Theodoridis");
+        Author birbou = new Author("Birbou");
+        Author kotzanikolaou = new Author("kotzanikolaou");
+        Author psarakis = new Author("Psarakis");
+        Author alepis = new Author("Alepis");
+        Author patsakis = new Author("Patsakis");
+        Author sapounakis = new Author("Sapounakis");
+        Author skondras = new Author("Skondras");
+
+        Book b1 = new Book("Book1", alepis, "368777540-2", 10, 2, 20);
+        Book b2 = new Book("Book2", patsakis, "963099898-2", 10, 1, 22);
+        Book b3 = new Book("Book3", theodoridis, "005382097-2", 10, 0, 23);
+        Book b4 = new Book("Book4", psarakis, "538310208-2", 10, 3, 24);
+        Book b5 = new Book("Book5", alepis, "562448132-2", 10, 4, 26);
+        Book b6 = new Book("Book6", kotzanikolaou, "670364563-2", 10, 2, 21);
+        Book b7 = new Book("Book7", patsakis, "466916869-2", 10, 5, 17);
+        Book b8 = new Book("Book8", psarakis, "764674973-2", 10, 0, 15);
+        Book b9 = new Book("Book9", sapounakis, "052469721-2", 10, 6, 17);
+        Book b10 = new Book("Book10", psarakis, "609291817-2", 10, 3, 13);
+        Book b11 = new Book("Book11", theodoridis, "451378028-2", 10, 8, 12);
+        Book b12 = new Book("Book12", kotzanikolaou, "142352773-2", 10, 6, 20);
+        Book b13 = new Book("Book13", theodoridis, "115135166-2", 10, 0, 20);
+        Book b14 = new Book("Book14", kotzanikolaou, "631942468-2", 10, 3, 20);
+        Book b15 = new Book("Book15", theodoridis, "323662444-2", 10, 0, 23);
+        Book b16 = new Book("Book16", skondras, "121360492-2", 10, 0, 12);
+        Book b17 = new Book("Book17", kotzanikolaou, "391199302-2", 10, 0, 20);
+        Book b18 = new Book("Book18", alepis, "549307784-2", 10, 1, 20);
+        Book b19 = new Book("Book19", kotzanikolaou, "368777230-2", 10, 23, 20);
+        Book b20 = new Book("Book20", skondras, "793027213-2", 10, 0, 20);
+
+        Book[] books = {b1, b2, b3, b4, b5, b6, b7,
+            b8, b9, b10, b11, b12, b13, b14, b15,
+            b16, b17, b18, b19, b20};
+
+        Library library = new Library(books);
+
+        Librarian lr = new Librarian(library);
+        lr.findMeAvailableBooks();
+        lr.findMeBook("kotzanikolaou");
+        lr.findMostPopularBook();
         System.out.println("");
-        System.out.println("Searches for a book based on a given title."
-                + " If the book exists then its details should be printed,"
-                + "otherwise an error message should be displayed");
-        System.out.println(l.printBookDetails(arr, "DataBase1"));
-        System.out.println("");
-        System.out.println("Shows only the books that have an author that "
-                + "matches a given name");
-        //l.printBooksFromAuthor(arr, Theodoridis);
-        l.printBooksFromAuthor(arr, Birbou);
-        System.out.println("");
-        System.out.println("Show the book with the highest number of"
-                + " the timesRented");
-        System.out.println(l.printTheMostPopularBook(arr));
-        System.out.println("--------");
-        Librarian lr = new Librarian();
-        System.out.println(b3);
-        lr.rentBook(b3);
-        System.out.println(b3);
+        System.out.println(b19);
+        if (lr.rentBook(b19)) {
+            System.out.println("Successful renting\n"+b19);
+        } else {
+            System.out.println("The book is not available");
+        }
 
     }
 
